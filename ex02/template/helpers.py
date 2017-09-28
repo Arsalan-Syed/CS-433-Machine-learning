@@ -44,8 +44,8 @@ def build_model_data(height, weight):
     y = weight
     x = height
     num_samples = len(y)
-	
-	'''column of 1s and column with data entries'''
+
+    '''column of 1s and column with data entries'''
     tx = np.c_[np.ones(num_samples), x] 
     return y, tx
 
