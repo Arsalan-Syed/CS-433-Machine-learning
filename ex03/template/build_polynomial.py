@@ -12,4 +12,10 @@ def build_poly(x, degree):
     # this function should return the matrix formed
     # by applying the polynomial basis to the input data
     # ***************************************************
-    raise NotImplementedError
+    n=x.shape[0]
+    matr=np.ones(n,)[np.newaxis]
+
+    for i in range(1,degree+1):
+        xp=np.power(x,i)[np.newaxis]
+        matr=np.append(matr,xp,axis=0)
+    return np.transpose(matr)
